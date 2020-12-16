@@ -165,7 +165,7 @@ names(totalDataSet)[-c(1:2)] <- gsub("mean\\()", "mean", names(totalDataSet)[-c(
 names(totalDataSet)[-c(1:2)] <- gsub("std\\()", "stdev", names(totalDataSet)[-c(1:2)])
 ```
 
-#### Step 8: Create a second, independentidy data set with the average of each variable for each activity and each subject
+#### Step 8: Create a second, independent tidy data set with the average of each variable for each activity and each subject
 This satisfies the **project requirement [#5](#script-assignment)**
 ```{r}
 tidyDataSet <- aggregate(.~subject.id + activity, totalDataSet, mean)
